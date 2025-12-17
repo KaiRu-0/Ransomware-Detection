@@ -4,14 +4,14 @@ import pandas as pd
 # ---------------- CONFIG ----------------
 
 INPUT_FILES = [
-	"ember_data/ember2018/train_features_0.jsonl",
-	"ember_data/ember2018/train_features_1.jsonl"
-	"ember_data/ember2018/train_features_2.jsonl",
-	"ember_data/ember2018/train_features_3.jsonl",
-	"ember_data/ember2018/train_features_4.jsonl",
-	"ember_data/ember2018/train_features_5.jsonl"
+	"database/ember2018/train_features_0.jsonl",
+	"database/ember2018/train_features_1.jsonl",
+	"database/ember2018/train_features_2.jsonl",
+	"database/ember2018/train_features_3.jsonl",
+	"database/ember2018/train_features_4.jsonl",
+	"database/ember2018/train_features_5.jsonl"
 	]
-OUTPUT_FILE = "ember_data/ember_static_features.csv"
+OUTPUT_FILE = "database/ember_static_features.csv"
 
 TOTAL_ROWS = 100000
 TARGET_PER_CLASS = TOTAL_ROWS // 2	# 50000 label=0, 50000 label=1

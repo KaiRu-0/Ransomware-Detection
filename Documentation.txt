@@ -9,7 +9,7 @@ both scores weighted and summed to find probability of the exe being ransomware
 
 
 Scripts:
-ember_data/ember2018 contains train_features_0.jsonl to train_features_5.jsonl
+database/ember2018 contains train_features_0.jsonl to train_features_5.jsonl
 The original ember dataset was extremely large so another script ember_jsonl_to_dataframe.py is used to create a small subset of the data for training the model, it creates ember_static_features.csv
 ember_static_features.csv only contains 100000 rows, half postives and half negative
 train_static_model will create the model Static_Model.pkl

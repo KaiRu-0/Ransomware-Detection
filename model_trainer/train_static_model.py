@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
 # ---------------- CONFIG ----------------
-DATASET_PATH = "ember_data/ember_static_features.csv"
+DATASET_PATH = "database/ember_static_features.csv"
 MODEL_OUT = "models\Static_Model.pkl"
 
 # ---------------- LOAD ----------------

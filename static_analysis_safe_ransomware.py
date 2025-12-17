@@ -13,7 +13,7 @@ warnings.filterwarnings(
 
 # ---------------- CONFIG ----------------
 MODEL_PATH = "models/Static_Model.pkl"
-CSV_PATH = "ember_data/malware_rows.csv"  # file containing ONLY those rows
+CSV_PATH = "database/malware_rows.csv"  # file containing ONLY those rows
 LABEL_COLUMN = 0  # first column is label
 
 # ---------------- LOAD MODEL ----------------
