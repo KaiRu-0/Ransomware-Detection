@@ -29,7 +29,7 @@ print("Balanced y distribution:", {
 })
 
 np.savez(
-	"bodmas_balanced_100k.npz",
+	"dynamic_training_data.npz",
 	X=X_balanced,
 	y=y_balanced
 )

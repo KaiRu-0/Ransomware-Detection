@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 # ---------------- CONFIG ----------------
-DATASET_PATH = "database\\bodmas_balanced_100k.npz"
+DATASET_PATH = "database/dynamic_training_data.npz"
 MODEL_OUT = "models/Dynamic_Model.pkl"
 
 TEST_SIZE = 0.2
