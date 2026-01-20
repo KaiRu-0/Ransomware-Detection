@@ -5,3 +5,7 @@ database/*
 
 models/*
 !models/.gitkeep
+
+train_set_creators/__pycache__
+
+test.py

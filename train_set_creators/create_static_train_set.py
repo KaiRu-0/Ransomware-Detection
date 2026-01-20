@@ -170,7 +170,7 @@ def load_balanced(path, counts):
 	return data
 
 # ---------------- MAIN ----------------
-def main():
+def create_static_train_set():
 	print("Loading all data...")
 	data = load_all_data(INPUT_FILES)
 
@@ -191,4 +191,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+	create_static_train_set()

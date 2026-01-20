@@ -1,6 +1,9 @@
 from pathlib import Path
 from analysis_modules.static_analysis import analyze_executable_static
 from analysis_modules.dynamic_analysis import analyze_executable_dynamic
+from train_set_creators.create_dynamic_train_set import create_dynamic_train_set
+from train_set_creators.create_static_train_set import create_static_train_set
+from os.path import isfile
 
 # ---------------- CONFIG ----------------
 STATIC_WEIGHT = 0.7
@@ -76,11 +79,65 @@ def analyze_file(file_path):
 		"verdict": verdict
 	}
 
+def main():
+	print("RANSOMWARE DETECTION SYSTEM")
+	menu = True
+	while menu == True:
+		print("MENU", "1. SETUP (RUN FIRST)", "2. ANALYZE EXE", "3. SHOWCASE", "4. EXIT", sep = '\n')
+
+
 
 # ---------------- ENTRY POINT ----------------
+def setup():
+	print("Performing Checks:")
+	print("Checking for ember dataset")
+	#do something
+	print("Confirmed")
+	print("Checking for Bodmas dataset")
+	#do something
+	print("Confirmed")
+
+	print("Creating training set for static analysis model")
+	create_static_train_set()
+	print("Static training set Created")
+	print("Creating training set for dynamic analysis model")
+	create_dynamic_train_set()
+	print("Dynamic training set Created\n")
+
+def analyze():
+	file = str(input("Enter Path to executable (.exe) to analyze(Example: C:\\User\\admin\\Downloads\\sample1.exe) : "))
+	if not file.lower().endswith(".exe"):
+		print("Invalid Path (not .exe type)")
+		analyze()
+	if not isfile(file):
+		print("Path does not exist or is not a file")
+	analyze_file(file)
+
+def showcase():
+	pass
+
+
+def main():
+	menu = True
+	while menu == True:
+		print("MENU", "1. SETUP (RUN FIRST)", "2. ANALYZE EXE", "3. SHOWCASE", "4. EXIT", sep = '\n')
+		option = int(input("Option: "))
+		if option == 1:
+			setup()
+			continue
+		elif option == 2:
+			analyze()
+		elif option == 3:
+			showcase()
+		elif option == 4:
+			print("Exiting")
+			break
+		else:
+			print("Invalid Option, try again")
+			continue
+
+
 if __name__ == "__main__":
-	folder = Path("test_executable_files")
-	for file in folder.glob("*.exe"):
-		analyze_file(str(file))
+	main()
 
 	
